@@ -1,0 +1,12 @@
+{
+  "name": "winston-koa-sse",
+  "version": "1.0.0",
+  "description": "winston koa transport based on sse",
+  "main": "index.js",
+  "author": "Alexandre Victoor",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "winston": "^2.4.0"
+  }
+}

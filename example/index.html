@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+            const streamUrl = 'http://localhost:3000';
+            const source = new EventSource(streamUrl); 
+            
+            const levels = ['debug', 'info', 'warn', 'error', 'fatal'];
+            levels.forEach(level => {
+                source.addEventListener(level, function(event) {
+                    console[level](event.data);
+                });
+            });
+        </script>
+
+    </body>
+</html>
