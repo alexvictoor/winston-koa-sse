@@ -1,5 +1,5 @@
 {
-  "name": "winston-koa-sse",
+  "name": "winston-koa-transport",
   "version": "1.0.0",
   "description": "winston koa transport based on sse",
   "main": "index.js",
