@@ -1,6 +1,6 @@
 {
   "name": "winston-koa-sse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "winston koa transport based on sse",
   "main": "index.js",
   "author": "Alexandre Victoor",
