@@ -1,4 +1,4 @@
-# winston-koa-transport
+# winston-koa-sse
 
 A winston transport for KOA applications that streams logs to your browser leveraging SSE
 
