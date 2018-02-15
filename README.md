@@ -4,11 +4,11 @@ A winston transport for KOA applications that streams logs to your browser lever
 
 ## Installation
 ``` bash
-  $ npm install winston-koa-transport
+  $ npm install winston-koa-sse
 
   or
 
-  $ yarn add winston-koa-transport
+  $ yarn add winston-koa-sse
 ```
 
 ## Usage
