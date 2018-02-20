@@ -51,6 +51,9 @@ const middleware = ctx => {
     ctx.set("Connection", "keep-alive");
     ctx.set("Access-Control-Allow-Origin", "*");
     const stream = new PassThrough();
+    stream.write(
+        sse("info", 'Connected successfully on LOG stream')
+    );
     connectionStreams.push(stream);
     ctx.body = stream;
 }
