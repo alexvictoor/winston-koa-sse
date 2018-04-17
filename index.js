@@ -15,6 +15,11 @@ const send = (type, msg) => {
     const nbStreams = connectionStreams.length;
     let writeDone = 0; 
     connectionStreams.forEach(stream => {
+        if (stream.closed) {
+            stream.removeAllListeners();
+            writeDone++;
+            return;
+        }
         stream.write(sseEvent, (error) => {
             writeDone++;
             if (!error) {
@@ -51,6 +56,9 @@ const middleware = ctx => {
     ctx.set("Connection", "keep-alive");
     ctx.set("Access-Control-Allow-Origin", "*");
     const stream = new PassThrough();
+    stream.on('close', () => {
+        stream.closed = true; 
+    });
     stream.write(
         sse("info", 'Connected successfully on LOG stream')
     );
