@@ -4,7 +4,8 @@ const util = require('util');
 const PassThrough = require('stream').PassThrough;
 
 const sse = (type, msg) => {
-    return `event: ${ type }\ndata: ${ msg }\n\n`
+    const multiLineMsg = msg.split('\n').join('\ndata: ');
+    return `event: ${ type }\ndata: ${ multiLineMsg }\n\n`
 }
 
 let connectionStreams = []; 

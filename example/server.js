@@ -12,7 +12,8 @@ let i = 0;
 setInterval(() => {
     winston.error("one error log", i++);
     winston.info("info is good as well", i);
-    winston.debug("debug works too", i);
+    winston.debug(`debug works too ${i}, 
+    on multiple lines`);
 }, 1000);
 
 app.listen(3000);
